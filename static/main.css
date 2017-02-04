@@ -1,0 +1,12 @@
+.app {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.search {
+	width: 100%;
+}
+
+p {
+	color: blue;
+}

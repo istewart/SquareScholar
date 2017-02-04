@@ -74,4 +74,9 @@ except Exception as e:
 
 hist_json = json.loads(hist_data)
 hist_json["histograms"]
+hist_json["histograms"][1]["histogram"]
 
+#get the name of related fields and then search them and display a similar thist
+#of like how much stuff goes on over time or whatver
+hist_json["histograms"][1]["histogram"][2]['value']
+#make ur own search term it'll be great

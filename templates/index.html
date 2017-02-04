@@ -4,12 +4,31 @@
     <meta charset="utf-8">
     <title> SquareScholar </title>
     <link rel="stylesheet" href="static/main.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div id="app">
+    <div id="app" class="container">
+    <div class="col-md-12">
     	<form>
     		<input class="search" type="text"></input>
     	</form>
+      <div class="col-md-6">
+        {% for article in articles %}
+          <div class="article">
+            <h3>{{ article.title }}</h3>
+            <p>{{ article.text }}</p>
+          </div>
+        {% else %}
+
+        {% endfor %}
+      </div>
     </div>
   </body>
 </html>

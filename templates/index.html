@@ -24,11 +24,13 @@
 	      <div class="col-md-6">
 	        {% for article in articles %}
 	          <div class="well">
-	            <h4>{{ article.title }}</h4>
+	            <a href={{ article.link }}><h4>{{ article.title.title() }}</h4></a>
 	            <p>
-	            	<span style="font-size: 15px;"><b> {{ article.author }} </b></span>
-        			<span style="font-size: 13px; color: #8899a6;"> {{ article.year }} </span>
+	            	<span style="font-size: 13px;"><b> {{ article.author }} </b></span>
+        			<span style="font-size: 11px; color: #8899a6;"> {{ article.year }} </span>
 	            </p>
+	            <p class="description">{{ article.description }}</p>
+	            <p><span style="font-size: 13px; color: #337ab7;"> Cited {{ article.citations }} times. </span></p>
 	          </div>
 	        {% else %}
 	        	<p>No articles :(</p>

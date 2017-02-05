@@ -1,16 +1,18 @@
 body {
-	padding-top: 12px;
+	padding-top: 20px;
 }
 
 .app {
-	max-width: 900px;
+	max-width: 1000px;
 	margin: auto;
 }
 
 .topbar {
 	width: 100%;
-	margin-bottom: 12px;
+	margin-bottom: 20px;
 }
 
-
+.description {
+	font-size: 12px;
+}
 

@@ -82,7 +82,7 @@ def get_articles(search_term):
     data_json = json.loads(data)
     #print(json.loads(data_json["entities"][0]["E"]))
     ob = [{'title': data_json["entities"][x]["Ti"],
-            'author': data_json["entities"][x]["AA"],
+            'author': _process_authors(data_json["entities"][x]["AA"]),
             #'journal': data_json["entities"][x]["J"][0]["Jn"],
             'journal': json.loads(data_json["entities"][x]["E"])["VFN"],
             'year': data_json["entities"][x]["Y"],
@@ -102,6 +102,14 @@ author = data_json["entities"][0]["AuN"]
 citation_number = data_json["entities"][0]["CC"]
 year = data_json["entities"][0]["Y"]
 journal = data_json["entities"][0]["J.Jn"]"""
+
+def _process_authors(authors):
+    out = ""
+    for author in authors:
+        out += author['AuN'].title() + ", "
+
+    return out[:-2]
+
 
 if __name__ == '__main__':
     get_articles('hippocampus')

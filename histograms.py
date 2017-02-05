@@ -77,7 +77,10 @@ def get_histos(search_term):
     hist_json["histograms"][1]["histogram"]
     topics = [{'topic': hist_json["histograms"][1]["histogram"][x]['value'],
                'count': hist_json["histograms"][1]["histogram"][x]['count']} for x in range(0,17)]
-    print(topics)
+    years = [{'year': hist_json["histograms"][0]["histogram"][x]['value'],
+               'count': hist_json["histograms"][0]["histogram"][x]['count']} for x in range(0,17)]
+    return [{'fields':topics},{'years':years}]
+    
         
 
 #get the name of related fields and then search them and display a similar thist

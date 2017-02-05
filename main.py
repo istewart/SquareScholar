@@ -1,5 +1,7 @@
 from flask import render_template
 from flask import Flask
+from flask import jsonify
+
 app = Flask(__name__)
 
 from article_lister2 import get_articles
@@ -11,4 +13,5 @@ def home():
 
 @app.route('/topics')
 def topics():
-    return get_histos('hippocampus')
+    # print(get_histos('hippocampus'))
+    return jsonify(get_histos('hippocampus'))

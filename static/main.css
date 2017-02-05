@@ -1,14 +1,15 @@
+body {
+	padding-top: 12px;
+}
+
 .app {
 	max-width: 900px;
 	margin: auto;
 }
 
-.search {
+.topbar {
 	width: 100%;
-}
-
-p {
-	color: blue;
+	margin-bottom: 12px;
 }
 
 

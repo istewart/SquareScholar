@@ -18,5 +18,8 @@ def home():
 
 @app.route('/topics')
 def topics():
-    # print(get_histos('hippocampus'))
-    return jsonify(get_histos('hippocampus'))
+	term = request.args.get('term')
+	if not term:
+		term = 'hippocampus'
+
+	return jsonify(get_histos(term))

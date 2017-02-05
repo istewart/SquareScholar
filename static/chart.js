@@ -1,8 +1,10 @@
 window.onload = function () {
 	var dataPoints = [];
 
-	$.get("/topics", function(data, status) {
-		// console.log(data);
+	var term = getParameterByName('term');
+	console.log(term);
+
+	$.get("/topics", {term: term}, function(data, status) {
 		data = data[1].years;
 
 		console.log(data);
@@ -17,8 +19,6 @@ window.onload = function () {
 			var curr = data[i];
 			dataPoints.push({x: new Date(curr.year, 0), y: parseInt(curr.count)});
 		}
-
-		// console.log(dataPoints);
 
 		var chart = new CanvasJS.Chart("line-chart",
 		{
@@ -72,6 +72,15 @@ window.onload = function () {
 		});
 }
 
-function update() {
-	
+function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }

@@ -30,52 +30,6 @@ window.onload = function () {
 		{        
 			type: "line",
 			lineThickness:3,
-			axisYType:"secondary",
-			showInLegend: true,           
-			name: "India", 
-			dataPoints: [
-			{ x: new Date(2001, 0), y: 0 },
-			{ x: new Date(2002, 0), y: 0.001 },
-			{ x: new Date(2003, 0), y: 0.01},
-			{ x: new Date(2004, 0), y: 0.05 },
-			{ x: new Date(2005, 0), y: 0.1 },
-			{ x: new Date(2006, 0), y: 0.15 },
-			{ x: new Date(2007, 0), y: 0.22 },
-			{ x: new Date(2008, 0), y: 0.38  },
-			{ x: new Date(2009, 0), y: 0.56 },
-			{ x: new Date(2010, 0), y: 0.77 },
-			{ x: new Date(2011, 0), y: 0.91 },
-			{ x: new Date(2012, 0), y: 0.94 }
-
-
-			]
-		},
-		{        
-			type: "line",
-			lineThickness:3,
-			showInLegend: true,           
-			name: "China",
-			axisYType:"secondary",
-			dataPoints: [
-			{ x: new Date(2001, 00), y: 0.18 },
-			{ x: new Date(2002, 00), y: 0.2 },
-			{ x: new Date(2003, 0), y: 0.25},
-			{ x: new Date(2004, 0), y: 0.35 },
-			{ x: new Date(2005, 0), y: 0.42 },
-			{ x: new Date(2006, 0), y: 0.5 },
-			{ x: new Date(2007, 0), y: 0.58 },
-			{ x: new Date(2008, 0), y: 0.67  },
-			{ x: new Date(2009, 0), y: 0.78},
-			{ x: new Date(2010, 0), y: 0.88 },
-			{ x: new Date(2011, 0), y: 0.98 },
-			{ x: new Date(2012, 0), y: 1.04 }
-
-
-			]
-		},
-		{        
-			type: "line",
-			lineThickness:3,
 			showInLegend: true,           
 			name: "USA",        
 			axisYType:"secondary",
